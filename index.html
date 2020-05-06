@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>牛逼电影网</title>
+	<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
+</head>
+<body>
+	<div id="app">
+	  <h1>网站列表</h1>
+	  <div
+	    v-for="site in info"
+	  >
+	    {{ site.name }}
+	  </div>
+	</div>
+	<script type = "text/javascript">
+	new Vue({
+	  el: '#app',
+	  data () {
+	    return {
+	      info: null
+	    }
+	  },
+	  mounted () {
+	    axios
+	      .get('http://kod.26an.cn/www/ma/api.php')
+	      .then(response => (this.info = response.data.sites))
+	      .catch(function (error) { // 请求失败处理
+	        console.log(error);
+	      });
+	  }
+	})
+	</script>
+</body>
+</html>
