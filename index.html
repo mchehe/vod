@@ -24,7 +24,7 @@
 	  },
 	  mounted () {
 	    axios
-	      .get('http://kod.26an.cn/www/ma/api.php')
+	      .get('https://kod.26an.cn/www/ma/api.php')
 	      .then(response => (this.info = response.data.sites))
 	      .catch(function (error) { // 请求失败处理
 	        console.log(error);
