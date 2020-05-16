@@ -4,7 +4,7 @@ const $ = require('cheerio');
 const request = require('request');
 const fs = require('fs');
  
-app.get('/', function (req, res) {
+app.get('/api/', function (req, res) {
 	request({
 	    url: 'https://www.360kan.com/dianying/list.php?year='+req.query.year+'&area='+req.query.area+'&act='+req.query.act+'&cat='+req.query.cat+'&pageno='+req.query.pageno,//请求路径
 	    method: "GET",//请求方式，默认为get
