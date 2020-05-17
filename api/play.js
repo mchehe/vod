@@ -6,7 +6,7 @@ const fs = require('fs');
 
 app.get('/api/play', function (req, res) {
 	request({
-	    url: 'https://www.xvideos.com/'+req.query.url,//请求路径
+	    url: 'https://www.xvideos.com'+req.query.url,//请求路径
 	    method: "GET",//请求方式，默认为get
 	    headers: {//设置请求头
 	        "content-type": "application/json",
@@ -18,7 +18,7 @@ app.get('/api/play', function (req, res) {
 	    	let info = {
 	    		low: /html5player.setVideoUrlLow\(\'(.*?)\'\)/g.exec(body)[1],
 	    		high: /html5player.setVideoUrlHigh\(\'(.*?)\'\)/g.exec(body)[1],
-	    		hls: /html5player.setVideoUrlHls\(\'(.*?)\'\)/g.exec(body)[1]
+	    		hls: /html5player.setVideoUrlHLS\(\'(.*?)\'\)/g.exec(body)[1]
 	    	};
 	    	data.push(info);
 	    	res.json(data);

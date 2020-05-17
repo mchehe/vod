@@ -25,7 +25,7 @@
 	  mounted () {
 	    axios
 	      .get('https://vod.now.sh/api/360?year=all&area=all&act=all&cat=all&pageno=1')
-	      .then(response => (this.info = response.data.sites))
+	      .then(response => (this.info = response.data))
 	      .catch(function (error) { // 请求失败处理
 	        console.log(error);
 	      });
