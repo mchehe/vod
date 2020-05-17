@@ -6,7 +6,7 @@ const fs = require('fs');
  
 app.get('/api/xvideo', function (req, res) {
 	request({
-	    url: 'https://www.xvideos.com/?k=jk'+req.query.k,//请求路径
+	    url: 'https://www.xvideos.com/?k='+req.query.k,//请求路径
 	    method: "GET",//请求方式，默认为get
 	    headers: {//设置请求头
 	        "content-type": "application/json",
@@ -19,7 +19,7 @@ app.get('/api/xvideo', function (req, res) {
 	    		let info = {
 	    			title: $('.title a',e).attr('title'),
 	    			url: $('.title a',e).attr('href'),
-	    			img: $('img',e).attr('src'),
+	    			img: $('img',e).attr('data-src'),
 	    			hd: $('.video-hd-mark',e).text(),
 	    			time: $('.duration',e).text()
 	    		};
