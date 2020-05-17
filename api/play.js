@@ -18,7 +18,7 @@ app.get('/api/play', function (req, res) {
 	    	let info = {
 	    		low: /html5player.setVideoUrlLow\(\'(.*?)\'\)/g.exec(body)[1],
 	    		high: /html5player.setVideoUrlHigh\(\'(.*?)\'\)/g.exec(body)[1],
-	    		hls: /html5player.setVideoUrlHLS\(\'(.*?)\'\)/g.exec(body)[1]
+	    		hls: /html5player.setVideoHLS\(\'(.*?)\'\)/g.exec(body)[1]
 	    	};
 	    	data.push(info);
 	    	res.json(data);
