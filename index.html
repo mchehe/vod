@@ -11,7 +11,7 @@
 	  <div
 	    v-for="site in info"
 	  >
-	    {{ site.name }}
+	    {{ site.title }}
 	  </div>
 	</div>
 	<script type = "text/javascript">
@@ -24,7 +24,7 @@
 	  },
 	  mounted () {
 	    axios
-	      .get('https://kod.26an.cn/www/ma/api.php')
+	      .get('https://vod.now.sh/api/?year=all&area=all&act=all&cat=all&pageno=7')
 	      .then(response => (this.info = response.data.sites))
 	      .catch(function (error) { // 请求失败处理
 	        console.log(error);
