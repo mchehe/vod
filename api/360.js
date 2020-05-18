@@ -29,7 +29,7 @@ app.get('/api/360', function (req, res) {
 	    	$('.list li',body).each(function(i, e) {
 	    		let info = {
 	    			title: $('.s1',e).text(),
-	    			url: encodeURI($('.js-tongjic',e).attr('href')),
+	    			url: decodeURI($('.js-tongjic',e).attr('href')),
 	    			img: $('img',e).attr('src'),
 	    			star: $('.star',e).text(),
 	    			hint: $('.hint',e).text(),

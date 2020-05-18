@@ -28,7 +28,7 @@ app.get('/api/search', function (req, res) {
 	    	$('.mozaique .thumb-block',body).each(function(i, e) {
 	    		let info = {
 	    			title: $('.title a',e).attr('title'),
-	    			url: encodeURI($('.title a',e).attr('href')),
+	    			url: decodeURI($('.title a',e).attr('href')),
 	    			img: $('img',e).attr('data-src'),
 	    			hd: $('.video-hd-mark',e).text(),
 	    			time: $('.duration',e).text()
