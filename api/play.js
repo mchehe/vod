@@ -14,14 +14,12 @@ app.get('/api/play', function (req, res) {
 	    },
 	}, function(error, response, body) {
 	    if (!error && response.statusCode == 200) {
-	    	var data = [];
 	    	let info = {
 	    		low: /html5player.setVideoUrlLow\(\'(.*?)\'\)/g.exec(body)[1],
 	    		high: /html5player.setVideoUrlHigh\(\'(.*?)\'\)/g.exec(body)[1],
 	    		hls: /html5player.setVideoHLS\(\'(.*?)\'\)/g.exec(body)[1]
 	    	};
-	    	data.push(info);
-	    	res.json(data);
+	    	res.json(info);
 	    }
 	});
 })
