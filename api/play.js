@@ -16,7 +16,7 @@ app.all('*', function (req, res, next) {
 })
 app.get('/api/play', function (req, res) {
 	request({
-	    url: 'https://www.xvideos.com'+req.query.url,//请求路径
+	    url: 'https://www.xvideos.com'+Buffer.from(req.query.url, 'base64').toString('ascii'),//请求路径
 	    method: "GET",//请求方式，默认为get
 	    headers: {//设置请求头
 	        "content-type": "application/json",
