@@ -15,9 +15,8 @@ app.all('*', function (req, res, next) {
   next()
 })
 app.get('/api/search', function (req, res) {
-	console.log('https://www.xvideos.com/?k='+req.query.k+'&p='+req.query.p);
 	request({
-	    url: 'https://www.xvideos.com/?k='+req.query.k+'&p='+req.query.p,//请求路径
+	    url: encodeURI('https://www.xvideos.com/?k='+req.query.k+'&p='+req.query.p),//请求路径
 	    method: "GET",//请求方式，默认为get
 	    headers: {//设置请求头
 	        "content-type": "application/json",
@@ -29,7 +28,7 @@ app.get('/api/search', function (req, res) {
 	    	$('.mozaique .thumb-block',body).each(function(i, e) {
 	    		let info = {
 	    			title: $('.title a',e).attr('title'),
-	    			url: $('.title a',e).attr('href'),
+	    			url: encodeURI($('.title a',e).attr('href')),
 	    			img: $('img',e).attr('data-src'),
 	    			hd: $('.video-hd-mark',e).text(),
 	    			time: $('.duration',e).text()
