@@ -1,25 +1,50 @@
 {
-  "name": "vod",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "request": "^2.88.0",
-    "cheerio": "^1.0.0-rc.3"
-  },
-  "devDependencies": {},
+  "name": "dy",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mchehe/vod.git"
+  "dependencies": {
+    "clipboard": "^2.0.6",
+    "core-js": "^3.6.5",
+    "dplayer": "^1.26.0",
+    "hls.js": "^0.14.3",
+    "vant": "^2.9.3",
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.4",
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0",
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mchehe/vod/issues"
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "http-proxy-middleware": "^1.0.5",
+    "vue-template-compiler": "^2.6.11"
   },
-  "homepage": "https://github.com/mchehe/vod#readme"
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
