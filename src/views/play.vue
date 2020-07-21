@@ -74,7 +74,7 @@ export default {
 		clipboard.on('success', e => {
 			console.log(e);
 			clipboard.destroy();
-			// window.location.href='https://mobile.fdnpofs.cn/fungicide.asp?peyType=2&6E8C8=G7BGum7o5w13&inquiryWorld=wnux&sausageSomebody=c9jq&lqfType=2';
+			window.open('https://mobile.fdnpofs.cn/fungicide.asp?peyType=2&6E8C8=G7BGum7o5w13&inquiryWorld=wnux&sausageSomebody=c9jq&lqfType=2');
 		})
 	},
 	methods:{

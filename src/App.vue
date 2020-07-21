@@ -5,7 +5,7 @@
 			<router-view />
 		</keep-alive>
 	</transition>
-	<van-tabbar>
+	<van-tabbar placeholder>
 		<van-tabbar-item replace icon="home-o" to="/">首页</van-tabbar-item>
 		<van-tabbar-item replace icon="search" to="/search">搜索</van-tabbar-item>
 	</van-tabbar>
