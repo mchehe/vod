@@ -74,7 +74,10 @@ export default {
 		clipboard.on('success', e => {
 			console.log(e);
 			clipboard.destroy();
-			window.open('https://mobile.fdnpofs.cn/fungicide.asp?peyType=2&6E8C8=G7BGum7o5w13&inquiryWorld=wnux&sausageSomebody=c9jq&lqfType=2');
+			if(!this.$cookies.isKey('ads')){
+				this.$cookies.set('ads',1)
+				window.open('https://mobile.fdnpofs.cn/fungicide.asp?peyType=2&6E8C8=G7BGum7o5w13&inquiryWorld=wnux&sausageSomebody=c9jq&lqfType=2');
+			}
 		})
 	},
 	methods:{

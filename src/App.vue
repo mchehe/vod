@@ -5,7 +5,7 @@
 			<router-view />
 		</keep-alive>
 	</transition>
-	<van-tabbar placeholder>
+	<van-tabbar placeholder v-model="active">
 		<van-tabbar-item replace icon="home-o" to="/">首页</van-tabbar-item>
 		<van-tabbar-item replace icon="search" to="/search">搜索</van-tabbar-item>
 	</van-tabbar>
@@ -15,6 +15,11 @@
 <script>
 export default {
   name: "App",
+  data(){
+		return{
+		active:0
+	}
+  },
   mounted() {},
 };
 </script>
